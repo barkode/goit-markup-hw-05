@@ -61,7 +61,7 @@ button {
   --light-color: #f4f4fd; /* CLOUD */
   --bgrnd-color: #ffffff; /* WHITE */
   --hero-btn-backgroung: #404bbf;
-  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -136,7 +136,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--dark-color);
-  transition: color var(--transition);
+  transition: color var(--trans-dur-and-func);
 }
 
 .link-item-block {
@@ -158,7 +158,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text-color);
-  transition: color var(--transition);
+  transition: color var(--trans-dur-and-func);
 }
 
 .contact-email:hover,
@@ -221,7 +221,8 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: transparent;
-  transition: background-color var(--transition), box-shadow var(--transition);
+  transition: background-color var(--trans-dur-and-func),
+    box-shadow var(--trans-dur-and-func);
 }
 
 .hero-btn:hover,
@@ -396,14 +397,14 @@ body {
   color: var(--sub);
   height: 100%;
   width: 100%;
-  transition: border var(--transition), color var(--transition);
+  transition: border var(--trans-dur-and-func), color var(--trans-dur-and-func);
 }
 
 .customer-menu-img {
   width: 104px;
   height: 56px;
   fill: var(--sub-text-color);
-  transition: fill var(--transition), color var(--transition);
+  transition: fill var(--trans-dur-and-func), color var(--trans-dur-and-func);
 }
 
 .customer-menu-link:hover,
@@ -460,7 +461,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
   height: 100%;
-  transition: background-color var(--transition);
+  transition: background-color var(--trans-dur-and-func);
 }
 
 .footer-social-link:hover,
@@ -492,7 +493,7 @@ body {
   height: 100%;
   overflow: auto;
   transform: translate(0, 100%);
-  transition: transform var(--transition);
+  transition: transform var(--trans-dur-and-func);
 
   font-size: 16px;
   line-height: 1.5;
@@ -522,8 +523,9 @@ body {
   border-radius: 4px;
   border: 1px solid #e7e9fc;
   font-family: var(--primary-font);
-  transition: color var(--transition), background-color var(--transition),
-    border-color var(--transition), box-shadow var(--transition);
+  transition: color var(--trans-dur-and-func),
+    background-color var(--trans-dur-and-func),
+    border-color var(--trans-dur-and-func), box-shadow var(--trans-dur-and-func);
 }
 
 .menu-btn:hover,
@@ -567,7 +569,7 @@ body {
 .portfolio-card-link {
   border: 0.5px solid var(--light-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--trans-dur-and-func);
 }
 
 .portfolio-card-link:hover,
@@ -585,3 +587,56 @@ body {
   border-color: var(--light-color);
   border-top: none;
 }
+/* ============= MODAL WINDOW ========== */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+}
+
+.modal {
+  position: absolute;
+  width: 408px;
+  height: 576px;
+  background: #fcfcfc;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24px;
+  right: 23px;
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--trans-dur-and-func),
+    border-radius var(--trans-dur-and-func);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.modal-close-btn-img {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+}
+/* ============= /MODAL WINDOW ========== */
