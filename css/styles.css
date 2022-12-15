@@ -61,6 +61,7 @@ button {
   --light-color: #f4f4fd; /* CLOUD */
   --bgrnd-color: #ffffff; /* WHITE */
   --hero-btn-backgroung: #404bbf;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -135,6 +136,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+  transition: color var(--transition);
 }
 
 .link-item-block {
@@ -156,13 +158,11 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text-color);
+  transition: color var(--transition);
 }
 
 .contact-email:hover,
-.contact-email:focus {
-  color: var(--brand-color);
-}
-
+.contact-email:focus,
 .contact-phone:hover,
 .contact-phone:focus {
   color: var(--brand-color);
@@ -221,6 +221,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: transparent;
+  transition: background-color var(--transition), box-shadow var(--transition);
 }
 
 .hero-btn:hover,
@@ -395,12 +396,14 @@ body {
   color: var(--sub);
   height: 100%;
   width: 100%;
+  transition: border var(--transition), color var(--transition);
 }
 
 .customer-menu-img {
   width: 104px;
   height: 56px;
   fill: var(--sub-text-color);
+  transition: fill var(--transition), color var(--transition);
 }
 
 .customer-menu-link:hover,
@@ -457,6 +460,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
   height: 100%;
+  transition: background-color var(--transition);
 }
 
 .footer-social-link:hover,
@@ -488,7 +492,7 @@ body {
   height: 100%;
   overflow: auto;
   transform: translate(0, 100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition);
 
   font-size: 16px;
   line-height: 1.5;
@@ -518,6 +522,8 @@ body {
   border-radius: 4px;
   border: 1px solid #e7e9fc;
   font-family: var(--primary-font);
+  transition: color var(--transition), background-color var(--transition),
+    border-color var(--transition), box-shadow var(--transition);
 }
 
 .menu-btn:hover,
@@ -561,6 +567,7 @@ body {
 .portfolio-card-link {
   border: 0.5px solid var(--light-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  transition: box-shadow var(--transition);
 }
 
 .portfolio-card-link:hover,
