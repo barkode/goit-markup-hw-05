@@ -494,10 +494,10 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--light-color);
-  /* padding-top: 40px; */
-  /* padding-right: 32px; */
-  /* padding-bottom: 40px; */
-  /* padding-left: 32px; */
+
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
   background-color: var(--brand-color);
 }
 
