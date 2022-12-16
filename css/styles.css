@@ -100,6 +100,23 @@ body {
   align-items: center;
 }
 
+.menu-item {
+  position: relative;
+}
+
+.act.menu-link::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+
+  background-color: var(--brand-color);
+  border-radius: 2px;
+
+  bottom: 0;
+  left: 0;
+}
+
 .menu-contact {
   display: flex;
   align-items: center;
@@ -142,8 +159,9 @@ body {
 .link-item-block {
   display: block;
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 28px;
 }
+
 .menu-link:hover,
 .menu-link:focus {
   color: var(--body-text-color);
